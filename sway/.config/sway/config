@@ -23,21 +23,13 @@ set $browser firefox
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/backgrounds/Fantasy-Landscape-Night.png fill
+output * bg ~/.config/backgrounds/wall.png fill
 #
 # Example configuration:
 #
 # Initial display setup
-output DP-4 resolution 2560x1440 position 0 0 scale 1.3
-# output DP-4 resolution 1920x1080 position 0 0
-output eDP-1 resolution 2880x1920 scale 1.6
 
-# Disable eDP-1 when the lid is closed and set DP-4 as primary
-bindswitch lid:on exec swaymsg output eDP-1 disable;
-
-# Enable eDP-1 when the lid is opened and restore the configuration
-bindswitch lid:off exec swaymsg output eDP-1 enable;
-
+output DP-1 resolution 1920x1080
 
 # Set up swayidle
 exec swayidle -w \
