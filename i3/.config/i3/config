@@ -30,6 +30,8 @@ exec --no-startup-id xrandr --output DP-1 --mode 1920x1080
 # Set up xss-lock and i3lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000" -notify 30 -notifier "notify-send -u critical -t 10000 'LOCKING screen in 30 seconds'"
+exec --no-startup-id picom --config ~/.config/picom.conf --daemon
+
 #
 # You can get the names of your outputs by running: xrandr
 ### Idle configuration
@@ -75,7 +77,7 @@ exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000" -notify 30 -no
     bindsym $mod+Shift+r restart
     # Exit i3 (logs you out of your X session)
     bindsym $mod+m exec i3-msg exit
-    bindsym $mod+Shift+l exec i3lock -c 000000
+    bindsym $mod+Shift+l exec i3lock -c 000000 -i ~/.config/backgrounds/wall.png 
 #
 # Moving around:
 #
