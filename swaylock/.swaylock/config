@@ -6,7 +6,9 @@ indicator-thickness=30
 #font=Hack Regular
 #font-size=11
 
-image=~/.config/backgrounds/wall.png
+image=~/.config/backgrounds/wall.png 
+image=~/.config/backgrounds/wall.png 
+scaling=fill
 
 text-color=00000000
 text-clear-color=00000000

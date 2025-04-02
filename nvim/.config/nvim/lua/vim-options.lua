@@ -38,10 +38,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Override for TypeScript files
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "typescript",
-  callback = function()
-    vim.opt_local.colorcolumn = "100"
-  end,
+    pattern = "typescript",
+    callback = function()
+        vim.opt_local.colorcolumn = "100"
+    end,
 })
 
 -- Override for Ruby files
@@ -72,7 +72,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.api.nvim_create_augroup('jaiFileType', { clear = true })
 
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-    pattern = '*.jai',         -- Match files with the .jai extension
+    pattern = '*.jai',           -- Match files with the .jai extension
     command = 'setfiletype jai', -- Set the filetype to 'jai'
 })
 
@@ -83,6 +83,15 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.bo.tabstop = 2
         vim.bo.softtabstop = 2
         vim.bo.expandtab = true
+    end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'php' },
+    callback = function()
+        vim.bo.autoindent = true
+        vim.bo.smartindent = true
+        vim.bo.indentexpr = ""
     end,
 })
 
