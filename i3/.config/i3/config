@@ -14,10 +14,10 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term /home/mackswell13/Applications/Ghostty.AppImage
 # Your preferred application launcher
-set $menu rofi -show run
-set $browser firefox
+set $menu rofi -show drun
+set $browser google-chrome
 ### Output configuration
 #
 # Default wallpaper
@@ -26,7 +26,11 @@ exec_always --no-startup-id feh --bg-fill ~/.config/backgrounds/wall.png
 # Example configuration:
 #
 # Initial display setup
-exec --no-startup-id xrandr --output DP-1 --mode 1920x1080
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1200
+
+exec --no-startup-id autorandr --change
+
+
 # Set up xss-lock and i3lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000" -notify 30 -notifier "notify-send -u critical -t 10000 'LOCKING screen in 30 seconds'"
@@ -194,7 +198,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man i3bar` for more information about this section.
 bar {
-    font xft:Hack Nerd Font 
+    font pango:JetBrainsMono 10
     status_command i3status
     position top
 }
