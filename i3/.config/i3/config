@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term /home/mackswell13/Applications/Ghostty.AppImage
+set $term ghostty
 # Your preferred application launcher
 set $menu rofi -show drun
 set $browser google-chrome
@@ -26,7 +26,8 @@ exec_always --no-startup-id feh --bg-fill ~/.config/backgrounds/wall.png
 # Example configuration:
 #
 # Initial display setup
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1200
+exec --no-startup-id xrandr --output eDP --mode 1920x1200 --primary --output HDMI-A-0 --mode 2560x1440 --left-of eDP
+
 
 exec --no-startup-id autorandr --change
 
