@@ -42,7 +42,7 @@ return {
 			lspconfig.ruby_lsp.setup({
 				capabilities = capabilities,
 				auto_start = true,
-                cmd = { "mise", "exec", "ruby", "--", "ruby-lsp" }
+				cmd = { "mise", "exec", "ruby", "--", "ruby-lsp" },
 			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
@@ -62,8 +62,12 @@ return {
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.ocamllsp.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
+				filetypes = { "html", "scss", "css" },
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

@@ -7,7 +7,7 @@ return {
       ensure_installed = { "ruby", "php"},        
       auto_install = true,                   
       highlight = { enable = true },   -- Enable highlighting
-      indent = { enable = false },          
+      indent = { enable = true },          
   })
   end,
 }

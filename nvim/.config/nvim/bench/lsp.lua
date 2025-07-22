@@ -100,6 +100,9 @@ return {
                         autostart = false
                     })
                 end,
+                ocaml_lsp = function()
+                    local lspconfig = require("lspconfig")
+                end,
             },
         })
 
