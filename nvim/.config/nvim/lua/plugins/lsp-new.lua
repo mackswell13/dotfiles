@@ -51,8 +51,7 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.zls.setup({
-				capabilities = capabilities,
-			})
+				capabilities = capabilities, })
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
@@ -64,6 +63,15 @@ return {
 			})
 			lspconfig.ocamllsp.setup({
 				capabilities = capabilities,
+			})
+            lspconfig.volar.setup({
+				capabilities = capabilities,
+				filetypes = { "vue", "typescript", "javascript" },
+				init_options = {
+					vue = {
+						hybridMode = false, -- Set to true if using Vue 2
+					},
+				},
 			})
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
